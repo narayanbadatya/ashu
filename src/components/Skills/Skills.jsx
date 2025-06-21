@@ -1,66 +1,98 @@
-// src/components/Skills/Skills.jsx
 import React from "react";
 import { SkillsInfo } from "../../constants";
 import Tilt from "react-parallax-tilt";
+import { motion } from "framer-motion";
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip as ReactTooltip } from "react-tooltip";
 
-const Skills = () => (
-  <section
-    id="skills"
-    className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans bg-skills-gradient clip-path-custom"
-  >
-    {/* Section Title */}
-    <div className="text-center mb-8">
-      <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
-      <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
-      <p className="text-gray-400 mt-4 text-lg font-semibold">
-      A collection of my technical skills and expertise honed through various projects and experiences
-      </p>
-    </div>
+const fadeVariant = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
 
-    {/* Skill Categories */}
-    <div className="flex flex-wrap gap-1 lg:gap-5 py-10 justify-between">
-      {SkillsInfo.map((category) => (
-        <div
-          key={category.title}
-          className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white 
-          shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
+const Skills = () => {
+  return (
+    <section
+      id="skills"
+      className="py-16 px-4 md:px-[8vw] lg:px-[12vw] font-sans"
+    >
+      <motion.div
+        className="text-center mb-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          visible: { transition: { staggerChildren: 0.2 } },
+        }}
+      >
+        <motion.h2
+          className="text-4xl font-bold text-white"
+          variants={fadeVariant}
         >
-          <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center">
-            {category.title}
-          </h3>
+          SKILLS
+        </motion.h2>
+        <motion.div
+          className="w-28 h-1 bg-purple-500 mx-auto mt-2"
+          variants={fadeVariant}
+        ></motion.div>
+        <motion.p
+          className="text-gray-400 mt-4 text-lg font-semibold"
+          variants={fadeVariant}
+        >
+          My technical abilities in frontend, backend and design.
+        </motion.p>
+      </motion.div>
 
-          {/* Skill Items - 3 per row on larger screens */}
-          <Tilt
+      <div className="flex flex-wrap gap-6 justify-between">
+        {SkillsInfo.map((category, index) => (
+          <motion.div
             key={category.title}
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
-            gyroscope={true}
+            className={`w-full md:w-[48%] border border-purple-500 rounded-2xl p-6 bg-[#0e0a1f]/50 shadow-[0_0_30px_1px_rgba(130,69,236,0.3)]`}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeVariant}
+            custom={index}
           >
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
-              {category.skills.map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-2 px-2 sm:py-2 sm:px-2 text-center"
-                >
-                  <img
-                    src={skill.logo}
-                    alt={`${skill.name} logo`}
-                    className="w-6 h-6 sm:w-8 sm:h-8"
-                  />
-                  <span className="text-xs sm:text-sm text-gray-300">
-                    {skill.name}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </Tilt>
-        </div>
-      ))}
-    </div>
-  </section>
-);
+            <h3 className="text-2xl font-semibold text-white text-center mb-6">
+              {category.title}
+            </h3>
+            <Tilt tiltMaxAngleX={20} tiltMaxAngleY={20} scale={1.05}>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {category.skills.map((skill, i) => (
+                  <motion.div
+                    key={skill.name}
+                    className="relative flex flex-col items-center justify-center gap-2 border border-gray-700 rounded-2xl px-4 py-3 text-center"
+                    data-tooltip-id={`skill-${skill.name}`}
+                    data-tooltip-content={skill.description || skill.name}
+                    variants={fadeVariant}
+                    custom={i}
+                  >
+                    <img
+                      src={skill.logo}
+                      alt={`${skill.name} logo`}
+                      className="w-8 h-8"
+                    />
+                    <span className="text-sm text-gray-300">{skill.name}</span>
+                    <ReactTooltip id={`skill-${skill.name}`} place="top" effect="solid" />
+                  </motion.div>
+                ))}
+              </div>
+            </Tilt>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Skills;

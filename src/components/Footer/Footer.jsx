@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   // Smooth scroll function
@@ -21,7 +21,7 @@ const Footer = () => {
           {[
             { name: "About", id: "about" },
             { name: "Skills", id: "skills" },
-            { name: "Experience", id: "experience" },
+            { name: "Gallary", id: "gallary" },
             { name: "Projects", id: "projects" },
             { name: "Education", id: "education" },
           ].map((item, index) => (
@@ -36,13 +36,12 @@ const Footer = () => {
         </nav>
 
         {/* Social Media Icons - Responsive */}
-        <div className="flex flex-wrap justify-center space-x-4 mt-6">
+        <div className="flex flex-wrap justify-center space-x-8 mt-5">
           {[
-            { icon: <FaFacebook />, link: "" },
-            { icon: <FaTwitter />, link: "" },
-            { icon: <FaLinkedin />, link: "" },
-            { icon: <FaInstagram />, link: "https://www.instagram.com/ashish_14____?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" },
-            { icon: <FaYoutube />, link: "" },
+           
+            
+            { icon: <FaGithub />, link: "https://github.com/narayanbadatya" },
+            { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/narayanbadatya" },
             
           ].map((item, index) => (
             <a
@@ -58,7 +57,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright Text */}
-        <p className="text-sm text-gray-400 mt-6">
+        <p className="text-sm text-gray-400 mt-7">
           © 2025 NarayanBadatya. All rights reserved.
         </p>
       </div>

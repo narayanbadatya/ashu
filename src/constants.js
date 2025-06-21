@@ -33,13 +33,12 @@ import vercelLogo from './assets/tech_logo/vercel.png';
 import postgreLogo from './assets/tech_logo/postgre.png';
 import csharpLogo from './assets/tech_logo/csharp.webp';
 import canvaLogo from './assets/tech_logo/canva.png';
-
+import Ui from './assets/gallery/watch.png';
 
 // Experience Section Logo's
 import webverseLogo from './assets/company_logo/webverse_logo.png';
 import agcLogo from './assets/company_logo/agc_logo.png';
 import newtonschoolLogo from './assets/company_logo/newtonschool_logo.png';
-
 
 // Education Section Logo's
 import glaLogo from './assets/education_logo/gla_logo.png';
@@ -60,6 +59,45 @@ import cmLogo from './assets/work_logo/cm.png';
 import imagesearchLogo from './assets/work_logo/image_search.png';
 import removebgLogo from './assets/work_logo/remove_bg.png';
 
+// constants.js
+// src/constants.js
+// src/constants.js
+
+// src/constants.js
+// src/constants.js
+// src/constants.js
+// src/constants/index.js
+export const ADD_GALLERY_IMAGES = [
+  {
+    src: "public/assets/vps_logo.png",
+    alt: "Gallery Image 1"
+  },
+  {
+    src: "/assets/gallery2.jpg",
+    alt: "Gallery Image 2"
+  },
+  {
+    src: "/assets/gallery3.jpg",
+    alt: "Gallery Image 3"
+  }
+  // ... add more images here
+];
+
+
+const AddGalleryPage = [
+  { src: '/assets/image1.jpg', alt: 'Image 1' },
+  { src: '/assets/image2.jpg', alt: 'Image 2' },
+]
+
+export const GALLERY_IMAGES = [
+  {
+    id: 1,
+    src: "/src/assets/profile2.png",
+    alt: "Gallery Image 1",
+  },
+ 
+
+];
 
 export const SkillsInfo = [
   {
@@ -67,14 +105,11 @@ export const SkillsInfo = [
     skills: [
       { name: 'HTML', logo: htmlLogo },
       { name: 'CSS', logo: cssLogo },
-      
       { name: 'JavaScript', logo: javascriptLogo },
       { name: 'React JS', logo: reactjsLogo },
       { name: 'Angular', logo: angularLogo },
-     
       { name: 'Tailwind CSS', logo: tailwindcssLogo },
       { name: 'GSAP', logo: gsapLogo },
-     
       { name: 'Bootstrap', logo: bootstrapLogo },
     ],
   },
@@ -83,10 +118,8 @@ export const SkillsInfo = [
     skills: [
       { name: 'Springboot', logo: springbootLogo },
       { name: 'Node JS', logo: nodejsLogo },
-      
       { name: 'MySQL', logo: mysqlLogo },
       { name: 'MongoDB', logo: mongodbLogo },
-     
     ],
   },
   {
@@ -96,9 +129,7 @@ export const SkillsInfo = [
       { name: 'C++', logo: cppLogo },
       { name: 'Java', logo: javaLogo },
       { name: 'Python', logo: pythonLogo },
-    
       { name: 'JavaScript', logo: javascriptLogo },
-     
     ],
   },
   {
@@ -107,211 +138,119 @@ export const SkillsInfo = [
       { name: 'Git', logo: gitLogo },
       { name: 'GitHub', logo: githubLogo },
       { name: 'VS Code', logo: vscodeLogo },
-     
       { name: 'Figma', logo: figmaLogo },
       { name: 'Photoshop', logo: firebaseLogo },
       { name: 'Canva', logo: canvaLogo },
       { name: 'Capcut', logo: csharpLogo },
-      
-      
     ],
   },
 ];
 
-  export const experiences = [
-    {
-      id: 0,
-      img: webverseLogo,
-      role: " name",
-      company: "Webverse Digital",
-      date: "date",
-      desc: "desc",
-      skills: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-      
-      ],
-    },
-    {
-      id: 1,
-      img: agcLogo,
-      role: " ",
-      company: "name of company",
-      date: "date",
-      desc: "desc",
-      skills: [
 
-        "JavaScript",
-        "Tailwind CSS",
-        "HTML",
-        "CSS",
-        "SQL",
-      ],
-    },
-    {
-      id: 2,
-      img: newtonschoolLogo,
-      role: "name",
-      company: " School",
-      date: "name",
-      desc: "desc",
-      skills: [
-        "HTML",
-        "CSS",
-        "Javascript",
-        "Bootstrap",
-        "Figma",
-        
-      ],
-    },
-  ];
+export const experiences = [
+ 
+];
+
+export const education = [
+  {
+    id: 0,
+    img: gvLogo,
+    school: "Graduvation",
+    date: "date",
+    grade: "0.00 CGPA",
+    desc: "Currently learning Full-Stack Web Development using tools like HTML, CSS, JavaScript, React (Front-end) and Node.js, MongoDB (Back-end). Building projects to develop practical skills.",
+    degree: "Full Stack Web Development",
+    skills: ["HTML", "CSS", "Javascript", "Bootstrap", "TailwindCSS","NodeJS"]
+  },
+  {
+    id: 1,
+    img: roshLogo,
+    school: "School of Passion",
+    date: "date",
+    desc: "I create creative Graphic Designs and professional posters and video edits that give your brand a unique identity.",
+    degree: "Graphic Design with Marketing",
+    skills: ["Photoshop", "Illustrator", "CapCut", "Canva", "Figma"]
+  },
+  {
+    id: 2,
+    img: bsaLogo,
+    school: "Sparsh College, Brahmapur",
+    date: "date",
+    grade: "Maintaining 7.8 CGPA",
+    desc: "I am currently pursuing BCA and I'm a second-year student with a strong interest in web development. I've built responsive websites using HTML, CSS, JavaScript and Tailwind CSS.",
+    degree: "BCA - Bachelor of Computer Applications"
+  },
+  {
+    id: 3,
+    img: vpsLogo,
+    school: "Saraswati Vidya Mandir",
+    date: "Apr 2021 - Mar 2023",
+    grade: "54.4%",
+    desc: "I completed my Class 12 education under the CBSE board, where I studied Economics and Education.",
+    degree: "CBSE (XII) - Arts with Economics and Education"
+  },
+  {
+    id: 4,
+    img: nodalLogo,
+    school: "Malusanta Govt. Nodal High School, Damanjodi",
+    date: "Date - 2021",
+    grade: "65.8%",
+    desc: "I completed my Class 10 education under the CBSE board, where I studied Science with Computer Application.",
+    degree: "CBSE (X) - Science with Computer Application"
+  }
+];
+
+export const projects = [
+  {
+    id: 0,
+    image:Ui,
+    title: "Responsive-watches-website",
+    description: "Latest arrival of the new imported watches of the B720 series, with a modern and resistant design.",
+    tags: ["HTML", "CSS", "JavaScript",],
+    github: "https://github.com/narayanbadatya/Responsive-watches-website",
+    webapp: "https://watches-web-iota.vercel.app/",
+  },
+  {
+    id: 1,
+    title: "Moblie-App",
+    description: "Transforming Ideas into Innovative Mobile Apps",
+    tags: [ "HTML", "CSS", "JavaScript"],
+    github: "https://github.com/narayanbadatya/Moblie-App?tab=readme-ov-file",
+    webapp: "moblie-app-eight.vercel.app",
+  },
+  {
+    id: 2,
+    title: "SolarSystem",
+    description: "The planetary system we call home is located in an outer spiral arm of the Milky Way galaxy.",
+    tags: [ "HTML", "CSS", "JavaScript","Figma", "Canva",],
+    github: "https://github.com/narayanbadatya/SolarSystem",
+    webapp: "https://solar-system-by-narayan.vercel.app/",
+  },
+  {
+    id: 3,
+    title: "restaurant website",
+    description: "For the love of delicious foodCome with family  feel the joy of mouthwatering food",
+    tags: ["HTML", "CSS", "JavaScript","Figma"],
+    github: "https://github.com/narayanbadatya/restaurant-website",
+    webapp: "res-web-by.vercel.app",
+  },
+  {
+    id: 4,
+    
+    title: "Responsive pet food website",
+    description: "Beautiful UI. Modern Design. Fully Responsive.Built for all screens with style and performance in mind.",
+    ImageBitmap: gvLogo,
+    tags: ["HTML", "CSS"],
+    github: "https://github.com/narayanbadatya/Pawchews",
+    webapp: "pawchews.vercel.app",
+  },
+  {
+    id: 5,
+    title: "slider by js ",
+    description: "A fully responsive and functional vanilla js slider,Responsive for all devices, build using HTML, CSS, and vanilla JavaScript.",
+    tags: ["HTML", "CSS", "JavaScript", "Framer Motion"],
+    github: "https://github.com/narayanbadatya/slider_by_js",
+    webapp: "js-sliderr.vercel.app",
+  },
   
-  export const education = [
-    {
-      id: 0,
-      img: gvLogo,
-      school: "Graduvation",
-      date: "date",
-      grade: "0.00 CGPA",
-      desc: "Currently learing Full-Stack Web Development using tools HTML,CSS,JavaCript,React(Front-end) and Node.js,MongoDB (Back-end). Building projects for development skills",
-      degree: "Full Stack Web Development",
-    },
-    {
-      id: 0,
-      img: roshLogo,
-      school: "school of passion",
-      date: "date",
-      desc: "I create creative Grapic Desings and professional poster and video edits that give your brand a unique identity. Bringing originality and impact to every project to help grow your business effectively",
-      degree: "Graphic Design with Marketing",
-    },
-    {
-      id: 1,
-      img: bsaLogo,
-      school: "Sparsh Collge of Computer & Management",
-      date: "date",
-      grade: "Maintaining-7.8 CGPA",
-      desc: "I am currenly pursuing BCA and I'm a second-year student and with a strong interest in web development. I've built responsive websites using HTML,CSS,JavaScript and Tailwindcss.",
-      degree: " BCA - Bachelor of Computer Application ",
-    },
-    {
-      id: 2,
-      img: vpsLogo,
-      school: "Saraswati vidya Mandir",
-      date: "Apr 2021 - March 2023",
-      grade: "54.4%",
-      desc: "i completed my class 12 education from Saraswati vidya Mandir, Under the CBSE board, where i studied Economics and Education.",
-      degree: "CBSE(XII) - Arts with Economics and Education",
-    },
-    {
-      id: 3,
-      img: nodalLogo,
-      school: "Malusanta Govt. Nodal High School, Damanjodi",
-      date: " Date - 2021",
-      grade: "65.8%",
-      desc: "I completed my class 10 education form Malusnata Govt, Nodal high School, Damanjodi, under the CBSE board,where I studied Science with Computer.",
-      degree: "CBSE(X), Science with Computer Application",
-    },
-  ];
-  
-  export const projects = [
-    {
-      id: 0,
-      title: "name",
-      description:
-        "type",
-      // image:
-      tags: ["HTML", "CSS", "JavaScript", "React JS", "API"],
-      github: "",
-      webapp: "",
-    },
-    {
-      id: 1,
-      title: "name",
-      description:
-        "type",
-      // image: csprepLogo,
-      tags: ["React JS", "Node.js", "MongoDB", "Express", "HTML", "CSS", "JavaScript"],
-      github: "",
-      webapp: "",
-      
-    },
-    {
-      id: 2,
-      title: "name",
-      description:
-        "type",
-      // image: movierecLogo,
-      tags: ["React JS", "API", "HTML", "CSS", "JavaScript"],
-      github: "",
-      webapp: "",
-     
-    },
-    {
-      id: 3,
-      title: "name",
-      description:
-        "type",
-      // image: npmLogo,
-      tags: ["React JS", "Node.js", "NPM", "Validation"],
-      github: "",
-      webapp: "",
-     
-    },
-    {
-      id: 4,
-      title: "name",
-      description:
-        "type",
-      // image: taskremLogo,
-      tags: ["JavaScript", "Chrome Extension", "HTML", "CSS"],
-      github: "",
-      webapp: "",
-     
-    },
-    {
-      id: 5,
-      title: "name",
-      description:
-        "type",
-      // image: webverLogo,
-      tags: ["HTML", "CSS", "JavaScript", "Framer Motion"],
-      github: "",
-      webapp: "",
-     
-    },
-    {
-      id: 6,
-      title: "name",
-      description:
-        "type",
-      // image: cmLogo,
-      tags: ["React JS", "Node.js", "MongoDB", "Express", "Payment Integration"],
-      github: "",
-      webapp: "",
-      
-    },
-    {
-      id: 7,
-      title: "name",
-      description:
-        "type",
-      // image: imagesearchLogo,
-      tags: ["React JS", "API", "Search Feature", "CSS", "Javascript"],
-      github: "",
-      webapp: "",
-      
-    },
-    {
-      id: 8,
-      title: "name",
-      description:
-        "type",
-      // image: removebgLogo,
-      tags: ["React JS", "API", "Image Processing", "HTML", "CSS", "Javascript"],
-      github: "",
-      webapp: "",
-      
-      
-    },
-  ];
+];
