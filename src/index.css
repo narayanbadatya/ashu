@@ -17,13 +17,7 @@ html {
   }
 }
 /* index.css */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+
 /* Custom scrollbar for modern clean look */
 .custom-scrollbar::-webkit-scrollbar {
   width: 8px;

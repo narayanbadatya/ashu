@@ -6,17 +6,17 @@ import { motion } from "framer-motion";
 import GlowButton from "../components/Buttons/GlowButton";
 
 const SQUARE_MEDIA = [
-  { type: "image", src: "/assets/gallery/11.png", ratio: "square" },
+  { type: "image", src: "./assets/gallery/11.png", ratio: "square" },
 
 ];
 
 const PORTRAIT_MEDIA = [
-  { type: "image", src: "/assets/p/p-12.png", ratio: "portrait" },
+  { type: "image", src: "./assets/p/p-12.png", ratio: "portrait" },
 
 ];
 
 const YT_MEDIA = [
-  { type: "image", src: "/assets/ui/ui3.png", ratio: "16:9" },
+  { type: "image", src: "./assets/ui/ui3.png", ratio: "16:9" },
 
 ];
 
