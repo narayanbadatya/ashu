@@ -33,7 +33,7 @@ import vercelLogo from './assets/tech_logo/vercel.png';
 import postgreLogo from './assets/tech_logo/postgre.png';
 import csharpLogo from './assets/tech_logo/csharp.webp';
 import canvaLogo from './assets/tech_logo/canva.png';
-import Ui from './assets/gallery/watch.png';
+
 
 // Experience Section Logo's
 import webverseLogo from './assets/company_logo/webverse_logo.png';
@@ -58,6 +58,12 @@ import webverLogo from './assets/work_logo/web_dig.png';
 import cmLogo from './assets/work_logo/cm.png';
 import imagesearchLogo from './assets/work_logo/image_search.png';
 import removebgLogo from './assets/work_logo/remove_bg.png';
+import Ui from './assets/gallery/watch.png';
+import rest from './assets/gallery/rest-web.webp';
+import SolarSystem from './assets/gallery/solar-system.jpg';
+import pet from './assets/gallery/pawchews.webp';
+import jsslider from './assets/gallery/js-slider.png';
+import moblie from './assets/gallery/moblie-app.png';
 
 // constants.js
 // src/constants.js
@@ -201,42 +207,57 @@ export const education = [
 ];
 
 export const projects = [
-  {
-    id: 0,
-    image:Ui,
-    title: "Responsive-watches-website",
-    description: "Latest arrival of the new imported watches of the B720 series, with a modern and resistant design.",
-    tags: ["HTML", "CSS", "JavaScript",],
-    github: "https://github.com/narayanbadatya/Responsive-watches-website",
-    webapp: "https://watches-web-iota.vercel.app/",
-  },
-  {
-    id: 1,
-    title: "Moblie-App",
-    description: "Transforming Ideas into Innovative Mobile Apps",
-    tags: [ "HTML", "CSS", "JavaScript"],
-    github: "https://github.com/narayanbadatya/Moblie-App?tab=readme-ov-file",
-    webapp: "moblie-app-eight.vercel.app",
-  },
-  {
+   {
     id: 2,
-    title: "SolarSystem",
-    description: "The planetary system we call home is located in an outer spiral arm of the Milky Way galaxy.",
-    tags: [ "HTML", "CSS", "JavaScript","Figma", "Canva",],
+    image:SolarSystem,
+    title: "Solar System",
+    description: "An interactive, visually engaging solar system experience built with smooth 3D visuals and modern design elements.Inspired by space, the site offers a modern and immersive experience.",
+    tags: [ "HTML", "CSS", "JavaScript","Figma", "Canva","Photoshop"],
     github: "https://github.com/narayanbadatya/SolarSystem",
     webapp: "https://solar-system-by-narayan.vercel.app/",
   },
-  {
+{
     id: 3,
+    image:rest,
     title: "restaurant website",
-    description: "For the love of delicious foodCome with family  feel the joy of mouthwatering food",
+    description: "A mobile-friendly, high-quality animated homepage with smooth transitions and a classic design. Built using HTML, CSS, and JavaScript, and designed in Figma and Canva for a clean, responsive layout.",
     tags: ["HTML", "CSS", "JavaScript","Figma"],
     github: "https://github.com/narayanbadatya/restaurant-website",
     webapp: "res-web-by.vercel.app",
   },
   {
+    id: 0,
+    image:Ui,
+    title: "Responsive watches website",
+    description: "Latest arrival of the new imported watches of the B720 series, with a modern and resistant design.",
+    tags: ["HTML", "CSS", "JavaScript",],
+    github: "https://github.com/narayanbadatya/Responsive-watches-website",
+    webapp: "https://watches-web-iota.vercel.app/",
+  },
+   
+  {
+    id: 1,
+    title: "Moblie App",
+    image:moblie,
+    description: "Transforming Ideas into Innovative Mobile Apps.Clean and responsive design built with html,css,js",
+    tags: [ "HTML", "CSS", "JavaScript"],
+    github: "https://github.com/narayanbadatya/Moblie-App?tab=readme-ov-file",
+    webapp: "moblie-app-eight.vercel.app",
+  },
+ 
+ 
+  {
+    id: 5,
+    image:jsslider,
+    title: "slider by js ",
+    description: "A fully responsive and functional vanilla js slider,Responsive for all devices, build using HTML, CSS, and vanilla JavaScript.",
+    tags: ["HTML", "CSS", "JavaScript", "Framer Motion"],
+    github: "https://github.com/narayanbadatya/slider_by_js",
+    webapp: "js-sliderr.vercel.app",
+  },
+    {
     id: 4,
-    
+    image:pet,
     title: "Responsive pet food website",
     description: "Beautiful UI. Modern Design. Fully Responsive.Built for all screens with style and performance in mind.",
     ImageBitmap: gvLogo,
@@ -244,13 +265,4 @@ export const projects = [
     github: "https://github.com/narayanbadatya/Pawchews",
     webapp: "pawchews.vercel.app",
   },
-  {
-    id: 5,
-    title: "slider by js ",
-    description: "A fully responsive and functional vanilla js slider,Responsive for all devices, build using HTML, CSS, and vanilla JavaScript.",
-    tags: ["HTML", "CSS", "JavaScript", "Framer Motion"],
-    github: "https://github.com/narayanbadatya/slider_by_js",
-    webapp: "js-sliderr.vercel.app",
-  },
-  
 ];

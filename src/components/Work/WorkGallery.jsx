@@ -1,9 +1,4 @@
-// ✅ Removed scroll from modal preview image wrapper
-// ✅ Kept layout and other styling unchanged
-// ✅ Added lazy loading for large route components
-
-import React, { lazy, Suspense, useState } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { projects } from "../../constants";
 import ImageSlider from "../Gallery/ImageSlider";
@@ -14,11 +9,9 @@ const GALLERY_IMAGES = [];
 
 const WorkGallery = () => {
   const [selectedProject, setSelectedProject] = useState(null);
-  const navigate = useNavigate();
 
   const handleOpenModal = (project) => setSelectedProject(project);
   const handleCloseModal = () => setSelectedProject(null);
-  const handleAddGalleryClick = () => navigate("/gallery");
 
   return (
     <section id="gallery" className="relative bg-[#050414] text-white font-sans overflow-hidden">
@@ -50,11 +43,11 @@ const WorkGallery = () => {
         <ImageSlider />
 
         <div className="flex justify-center mt-10">
-          <GlowButton onClick={handleAddGalleryClick}>More Information</GlowButton>
+          <GlowButton onClick={() => window.location.href = "/gallery"}>More Information</GlowButton>
         </div>
       </div>
 
-      {/* Project Section */}
+      {/* Projects Section */}
       <div className="relative z-10 px-[6vw] py-10">
         <div className="text-center mb-14">
           <motion.h2
@@ -86,7 +79,7 @@ const WorkGallery = () => {
             >
               <div className="p-4">
                 <div className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-xl">
-                  <div className="absolute inset-0 overflow-y-auto snap-y snap-mandatory scrollbar-thin scrollbar-track-transparent scrollbar-thumb-purple-600">
+                  <div className="absolute inset-0 overflow-y-auto snap-y snap-mandatory custom-scrollbar">
                     <img
                       src={project.image}
                       alt={project.title}
